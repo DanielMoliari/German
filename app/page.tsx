@@ -12,7 +12,7 @@ export default function Home() {
         <div className="text-lg font-extrabold mb-5">Deutsch Lernen</div>
         <CountPill count={words.length} />
       </header>
-      <main className="max-w-[820px] mx-auto px-6 pt-7 pb-20">
+      <main className="max-w-[820px] mx-auto px-6 pt-3 pb-20">
         <WordListClient words={words} etymologyRules={etymologyRules} />
       </main>
     </div>
