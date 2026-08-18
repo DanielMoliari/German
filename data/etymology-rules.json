@@ -1,0 +1,42 @@
+[
+  {
+    "id": "rule-consonant-shift-t-z",
+    "title": "English 't' → German 'z'",
+    "description": "High German consonant shift: English 't' often corresponds to German 'z', especially at the start of a word or after a vowel.",
+    "type": "sound-shift",
+    "examples": [
+      { "german": "Zeit", "english": "time", "highlight": { "german": [0], "english": [0] } },
+      { "german": "Zunge", "english": "tongue", "highlight": { "german": [0], "english": [0] } },
+      { "german": "Zwei", "english": "two", "highlight": { "german": [0], "english": [0] } },
+      { "german": "Herz", "english": "heart", "highlight": { "german": [3], "english": [4] } },
+      { "german": "Salz", "english": "salt", "highlight": { "german": [3], "english": [3] } },
+      { "german": "Katze", "english": "cat", "highlight": { "german": [3], "english": [2] } }
+    ]
+  },
+  {
+    "id": "rule-w-to-v",
+    "title": "German 'w' → English 'v' sound",
+    "description": "Loanword pairs where German 'w' (pronounced like English 'v') maps directly onto a shared Germanic root spelled with 'w' in English.",
+    "type": "cognate-pair",
+    "examples": [
+      { "german": "Wasser", "english": "water", "highlight": { "german": [0], "english": [0] } },
+      { "german": "Winter", "english": "winter", "highlight": { "german": [0], "english": [0] } },
+      { "german": "Wort", "english": "word", "highlight": { "german": [0], "english": [0] } },
+      { "german": "warm", "english": "warm", "highlight": { "german": [0], "english": [0] } },
+      { "german": "Wind", "english": "wind", "highlight": { "german": [0], "english": [0] } }
+    ]
+  },
+  {
+    "id": "rule-consonant-shift-p-f",
+    "title": "English 'p' → German 'f/ff/pf'",
+    "description": "High German consonant shift: English 'p' often corresponds to German 'f', 'ff', or 'pf' depending on position in the word.",
+    "type": "sound-shift",
+    "examples": [
+      { "german": "Apfel", "english": "apple", "highlight": { "german": [1], "english": [1] } },
+      { "german": "Pfeffer", "english": "pepper", "highlight": { "german": [0], "english": [0] } },
+      { "german": "Schiff", "english": "ship", "highlight": { "german": [4], "english": [2] } },
+      { "german": "hoffen", "english": "hope", "highlight": { "german": [2], "english": [1] } },
+      { "german": "tief", "english": "deep", "highlight": { "german": [2], "english": [2] } }
+    ]
+  }
+]
