@@ -1,16 +1,61 @@
 [
   {
-    "id": "rule-consonant-shift-t-z",
-    "title": "English 't' → German 'z'",
-    "description": "High German consonant shift: English 't' often corresponds to German 'z', especially at the start of a word or after a vowel.",
+    "id": "rule-d-to-t",
+    "title": "English 'd' → German 't'",
+    "description": "High German consonant shift: the Germanic voiced stop 'd' stayed 'd' in English but shifted to unvoiced 't' in German. Say the English word and swap the 'd' for a 't' to guess the German one.",
+    "type": "sound-shift",
+    "examples": [
+      { "german": "hart", "english": "hard", "highlight": { "german": [3], "english": [3] } },
+      { "german": "Tag", "english": "day", "highlight": { "german": [0], "english": [0] } },
+      { "german": "tun", "english": "do", "highlight": { "german": [0], "english": [0] } },
+      { "german": "tot", "english": "dead", "highlight": { "german": [0, 2], "english": [0, 3] } },
+      { "german": "Tat", "english": "deed", "highlight": { "german": [0], "english": [0] } },
+      { "german": "Tochter", "english": "daughter", "highlight": { "german": [0], "english": [0] } },
+      { "german": "trinken", "english": "drinking", "highlight": { "german": [0], "english": [0] } }
+    ]
+  },
+  {
+    "id": "rule-t-to-z",
+    "title": "English 't' → German 'z' / 'tz'",
+    "description": "High German consonant shift: English 't' (from Proto-Germanic 't') often corresponds to German 'z' (pronounced 'ts'), especially at the start of a word or after a vowel.",
     "type": "sound-shift",
     "examples": [
       { "german": "Zeit", "english": "time", "highlight": { "german": [0], "english": [0] } },
       { "german": "Zunge", "english": "tongue", "highlight": { "german": [0], "english": [0] } },
-      { "german": "Zwei", "english": "two", "highlight": { "german": [0], "english": [0] } },
+      { "german": "zwei", "english": "two", "highlight": { "german": [0], "english": [0] } },
       { "german": "Herz", "english": "heart", "highlight": { "german": [3], "english": [4] } },
       { "german": "Salz", "english": "salt", "highlight": { "german": [3], "english": [3] } },
-      { "german": "Katze", "english": "cat", "highlight": { "german": [3], "english": [2] } }
+      { "german": "Katze", "english": "cat", "highlight": { "german": [3], "english": [2] } },
+      { "german": "sitzen", "english": "sit", "highlight": { "german": [2], "english": [2] } }
+    ]
+  },
+  {
+    "id": "rule-pf-f-to-p",
+    "title": "English 'p' → German 'pf' / 'f' / 'ff'",
+    "description": "High German consonant shift: English 'p' (from Proto-Germanic 'p') corresponds to German 'pf' at the start of a word, and to 'f' or 'ff' in the middle or end of a word.",
+    "type": "sound-shift",
+    "examples": [
+      { "german": "Apfel", "english": "apple", "highlight": { "german": [1, 2], "english": [1, 2] } },
+      { "german": "Pfad", "english": "path", "highlight": { "german": [0, 1], "english": [0] } },
+      { "german": "Pfund", "english": "pound", "highlight": { "german": [0, 1], "english": [0] } },
+      { "german": "Pfanne", "english": "pan", "highlight": { "german": [0, 1], "english": [0] } },
+      { "german": "Schiff", "english": "ship", "highlight": { "german": [4, 5], "english": [2] } },
+      { "german": "hoffen", "english": "hope", "highlight": { "german": [2], "english": [1] } },
+      { "german": "tief", "english": "deep", "highlight": { "german": [2], "english": [2] } }
+    ]
+  },
+  {
+    "id": "rule-s-ss-to-t",
+    "title": "English 't' → German 's' / 'ss' / 'z'",
+    "description": "High German consonant shift: English 't' after a vowel often corresponds to German 's', 'ss', or 'z' (a sibilant instead of a stop).",
+    "type": "sound-shift",
+    "examples": [
+      { "german": "Wasser", "english": "water", "highlight": { "german": [3, 4], "english": [3] } },
+      { "german": "zwei", "english": "two", "highlight": { "german": [0], "english": [1] } },
+      { "german": "essen", "english": "eat", "highlight": { "german": [2, 3], "english": [2] } },
+      { "german": "besser", "english": "better", "highlight": { "german": [3, 4], "english": [4] } },
+      { "german": "aus", "english": "out", "highlight": { "german": [2], "english": [2] } },
+      { "german": "Herz", "english": "heart", "highlight": { "german": [3], "english": [4] } }
     ]
   },
   {
@@ -27,16 +72,45 @@
     ]
   },
   {
-    "id": "rule-consonant-shift-p-f",
-    "title": "English 'p' → German 'f/ff/pf'",
-    "description": "High German consonant shift: English 'p' often corresponds to German 'f', 'ff', or 'pf' depending on position in the word.",
+    "id": "rule-k-g-pronunciation",
+    "title": "German 'g' at the end of a word sounds like 'k'",
+    "description": "Not a spelling correspondence with English, but a pronunciation rule worth knowing: German final 'g' is often devoiced to a 'k' sound (auslautverhärtung). Same word, different pronunciation depending on position — useful for reading words like Tag out loud.",
     "type": "sound-shift",
     "examples": [
-      { "german": "Apfel", "english": "apple", "highlight": { "german": [1], "english": [1] } },
-      { "german": "Pfeffer", "english": "pepper", "highlight": { "german": [0], "english": [0] } },
-      { "german": "Schiff", "english": "ship", "highlight": { "german": [4], "english": [2] } },
-      { "german": "hoffen", "english": "hope", "highlight": { "german": [2], "english": [1] } },
-      { "german": "tief", "english": "deep", "highlight": { "german": [2], "english": [2] } }
+      { "german": "Tag", "english": "day", "highlight": { "german": [2], "english": [] } },
+      { "german": "Eisberg", "english": "iceberg", "highlight": { "german": [7], "english": [7] } },
+      { "german": "Weg", "english": "way", "highlight": { "german": [2], "english": [] } },
+      { "german": "Zug", "english": "train", "highlight": { "german": [2], "english": [] } },
+      { "german": "genug", "english": "enough", "highlight": { "german": [4], "english": [] } }
+    ]
+  },
+  {
+    "id": "rule-personal-pronouns",
+    "title": "Personal pronouns share Germanic roots",
+    "description": "Core personal pronouns are some of the oldest, most stable words in a language — German and English pronouns still clearly share the same Proto-Germanic ancestors.",
+    "type": "cognate-pair",
+    "examples": [
+      { "german": "ich", "english": "I", "highlight": { "german": [0], "english": [0] } },
+      { "german": "du", "english": "you", "highlight": { "german": [], "english": [] } },
+      { "german": "wir", "english": "we", "highlight": { "german": [0, 1], "english": [0] } },
+      { "german": "ihm", "english": "him", "highlight": { "german": [0, 1], "english": [1, 2] } },
+      { "german": "uns", "english": "us", "highlight": { "german": [0, 1], "english": [0, 1] } },
+      { "german": "mein", "english": "mine", "highlight": { "german": [0, 1, 2], "english": [0, 1] } }
+    ]
+  },
+  {
+    "id": "rule-strong-verb-ablaut",
+    "title": "Strong verbs: shared vowel-change pattern (ablaut)",
+    "description": "Many of the most common German and English verbs are 'strong verbs' — instead of adding '-ed'/'-te', they change their core vowel to form past tenses, and German and English often use the same vowel pattern because both descend from the same Proto-Germanic strong verb classes.",
+    "type": "cognate-pair",
+    "examples": [
+      { "german": "schwimmen / schwamm / geschwommen", "english": "swim / swam / swum", "highlight": { "german": [], "english": [] } },
+      { "german": "singen / sang / gesungen", "english": "sing / sang / sung", "highlight": { "german": [], "english": [] } },
+      { "german": "trinken / trank / getrunken", "english": "drink / drank / drunk", "highlight": { "german": [], "english": [] } },
+      { "german": "finden / fand / gefunden", "english": "find / found / found", "highlight": { "german": [], "english": [] } },
+      { "german": "beginnen / begann / begonnen", "english": "begin / began / begun", "highlight": { "german": [], "english": [] } },
+      { "german": "kommen / kam / gekommen", "english": "come / came / come", "highlight": { "german": [], "english": [] } },
+      { "german": "sehen / sah / gesehen", "english": "see / saw / seen", "highlight": { "german": [], "english": [] } }
     ]
   }
 ]
