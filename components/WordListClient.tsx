@@ -1,11 +1,12 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import type { Word, PartOfSpeech, Difficulty } from "@/lib/types";
+import type { Word, EtymologyRule, PartOfSpeech, Difficulty } from "@/lib/types";
 import { Highlighted } from "@/components/Highlighted";
 import { bareGermanWord, articlePrefix } from "@/lib/highlight";
+import { RuleCard } from "@/components/RuleCard";
 
-type Tab = "study" | "table";
+type Tab = "study" | "table" | "etymology";
 
 const PART_OF_SPEECH_OPTIONS: PartOfSpeech[] = [
   "noun",
@@ -21,7 +22,13 @@ const PART_OF_SPEECH_OPTIONS: PartOfSpeech[] = [
 
 const DIFFICULTY_OPTIONS: Difficulty[] = ["beginner", "intermediate", "advanced"];
 
-export function WordListClient({ words }: { words: Word[] }) {
+export function WordListClient({
+  words,
+  etymologyRules,
+}: {
+  words: Word[];
+  etymologyRules: EtymologyRule[];
+}) {
   const [tab, setTab] = useState<Tab>("study");
   const [type, setType] = useState("");
   const [category, setCategory] = useState("");
@@ -105,9 +112,20 @@ export function WordListClient({ words }: { words: Word[] }) {
         >
           Table
         </button>
+        <button
+          onClick={() => selectTab("etymology")}
+          className={`px-6 py-2 text-sm font-bold rounded-t-md border-b-2 ${
+            tab === "etymology"
+              ? "text-[var(--gold)] border-[var(--gold)]"
+              : "text-[var(--text-dim)] border-transparent"
+          }`}
+        >
+          Etymology
+        </button>
       </div>
 
-      {/* Shared filter bar */}
+      {/* Shared filter bar (Study + Table only) */}
+      {tab !== "etymology" && (
       <div className="flex flex-wrap items-center gap-2.5 bg-[var(--surface)] border border-[var(--border)] rounded-xl px-4 py-3.5 mb-6">
         <select
           value={type}
@@ -186,6 +204,7 @@ export function WordListClient({ words }: { words: Word[] }) {
           {filtered.length} word{filtered.length === 1 ? "" : "s"}
         </span>
       </div>
+      )}
 
       {tab === "study" && (
         <div>
@@ -232,6 +251,14 @@ export function WordListClient({ words }: { words: Word[] }) {
       )}
 
       {tab === "table" && <WordTable words={filtered} />}
+
+      {tab === "etymology" && (
+        <div className="flex flex-col gap-3.5">
+          {etymologyRules.map((rule) => (
+            <RuleCard key={rule.id} rule={rule} />
+          ))}
+        </div>
+      )}
     </div>
   );
 }

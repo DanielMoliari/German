@@ -1,19 +1,19 @@
-import { TopNav } from "@/components/TopNav";
 import { CountPill } from "@/components/CountPill";
 import { WordListClient } from "@/components/WordListClient";
-import { getWords } from "@/lib/data";
+import { getWords, getEtymologyRules } from "@/lib/data";
 
 export default function Home() {
   const words = getWords();
+  const etymologyRules = getEtymologyRules();
 
   return (
     <div>
-      <TopNav active="words" />
-      <div className="text-center">
+      <header className="text-center pt-8 px-6">
+        <div className="text-lg font-extrabold mb-5">Deutsch Lernen</div>
         <CountPill count={words.length} />
-      </div>
+      </header>
       <main className="max-w-[820px] mx-auto px-6 pt-7 pb-20">
-        <WordListClient words={words} />
+        <WordListClient words={words} etymologyRules={etymologyRules} />
       </main>
     </div>
   );
