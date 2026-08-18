@@ -112,5 +112,88 @@
       { "german": "kommen / kam / gekommen", "english": "come / came / come", "highlight": { "german": [], "english": [] } },
       { "german": "sehen / sah / gesehen", "english": "see / saw / seen", "highlight": { "german": [], "english": [] } }
     ]
+  },
+  {
+    "id": "rule-ch-to-gh",
+    "title": "German 'ch' → English 'gh'",
+    "description": "German 'ch' and English 'gh' both descend from the same Proto-Germanic sound. English later stopped pronouncing the 'gh' in most words, but the spelling stayed — so if you see a silent 'gh' in English, try 'ch' in German.",
+    "type": "sound-shift",
+    "examples": [
+      { "german": "Nacht", "english": "night", "highlight": { "german": [2, 3], "english": [2, 3] } },
+      { "german": "Licht", "english": "light", "highlight": { "german": [2, 3], "english": [2, 3] } },
+      { "german": "lachen", "english": "laugh", "highlight": { "german": [2, 3], "english": [3, 4] } },
+      { "german": "acht", "english": "eight", "highlight": { "german": [2, 3], "english": [2, 3] } },
+      { "german": "Recht", "english": "right", "highlight": { "german": [3, 4], "english": [2, 3] } },
+      { "german": "Tochter", "english": "daughter", "highlight": { "german": [3, 4], "english": [3, 4] } }
+    ]
+  },
+  {
+    "id": "rule-sch-to-sh",
+    "title": "German 'sch' → English 'sh'",
+    "description": "German spells the 'sh' sound with three letters, 'sch', where English uses two. Once you know this, you can 'translate' many words just by re-spelling them.",
+    "type": "sound-shift",
+    "examples": [
+      { "german": "Schiff", "english": "ship", "highlight": { "german": [0, 1, 2], "english": [0, 1] } },
+      { "german": "Fisch", "english": "fish", "highlight": { "german": [2, 3, 4], "english": [1, 2] } },
+      { "german": "Schuh", "english": "shoe", "highlight": { "german": [0, 1, 2], "english": [0, 1] } },
+      { "german": "waschen", "english": "wash", "highlight": { "german": [3, 4, 5], "english": [2, 3] } },
+      { "german": "Fleisch", "english": "flesh", "highlight": { "german": [4, 5, 6], "english": [2, 3] } },
+      { "german": "Englisch", "english": "English", "highlight": { "german": [5, 6, 7], "english": [2, 3] } }
+    ]
+  },
+  {
+    "id": "rule-ei-to-long-i",
+    "title": "German 'ei' → English long 'i' sound",
+    "description": "German 'ei' is pronounced like the English word 'eye' — and it very often marks a cognate with an English word spelled with a long 'i' (as in 'mine' or 'wine').",
+    "type": "sound-shift",
+    "examples": [
+      { "german": "mein", "english": "mine", "highlight": { "german": [1, 2], "english": [1] } },
+      { "german": "Wein", "english": "wine", "highlight": { "german": [1, 2], "english": [1] } },
+      { "german": "Zeit", "english": "time", "highlight": { "german": [1, 2], "english": [1] } },
+      { "german": "Eis", "english": "ice", "highlight": { "german": [0, 1], "english": [0] } },
+      { "german": "heiß", "english": "hot", "highlight": { "german": [1, 2], "english": [] } },
+      { "german": "drei", "english": "three", "highlight": { "german": [2, 3], "english": [] } }
+    ]
+  },
+  {
+    "id": "rule-ie-to-ee",
+    "title": "German 'ie' → English 'ee' sound",
+    "description": "German 'ie' is a long 'ee' sound, and frequently corresponds to an English cognate spelled with 'ee' or 'ea'.",
+    "type": "sound-shift",
+    "examples": [
+      { "german": "tief", "english": "deep", "highlight": { "german": [1, 2], "english": [1, 2] } },
+      { "german": "Bier", "english": "beer", "highlight": { "german": [1, 2], "english": [1, 2] } },
+      { "german": "Knie", "english": "knee", "highlight": { "german": [2, 3], "english": [2, 3] } },
+      { "german": "hier", "english": "here", "highlight": { "german": [1, 2], "english": [1, 2] } },
+      { "german": "vier", "english": "four", "highlight": { "german": [1, 2], "english": [] } },
+      { "german": "sieben", "english": "seven", "highlight": { "german": [1, 2], "english": [1, 2] } }
+    ]
+  },
+  {
+    "id": "rule-b-to-v",
+    "title": "German 'b' → English 'v'",
+    "description": "Between vowels, a German 'b' sometimes corresponds to an English 'v' — both came from the same Proto-Germanic sound that later hardened to 'b' in German.",
+    "type": "sound-shift",
+    "examples": [
+      { "german": "Silber", "english": "silver", "highlight": { "german": [4], "english": [4] } },
+      { "german": "Grab", "english": "grave", "highlight": { "german": [3], "english": [3] } },
+      { "german": "sieben", "english": "seven", "highlight": { "german": [3], "english": [3] } },
+      { "german": "haben", "english": "have", "highlight": { "german": [2], "english": [2] } },
+      { "german": "geben", "english": "give", "highlight": { "german": [2], "english": [2] } }
+    ]
+  },
+  {
+    "id": "rule-false-friends",
+    "title": "False friends — look alike, mean something else",
+    "description": "Not every similar-looking word is a real cognate. These German words look or sound like an English word but actually mean something unrelated — worth learning explicitly so they don't trip you up. Included here precisely because they are the exception to every other rule in this list. (English column shows the real German meaning, not the misleading lookalike.)",
+    "type": "cognate-pair",
+    "examples": [
+      { "german": "Gift", "english": "poison", "highlight": { "german": [], "english": [] } },
+      { "german": "also", "english": "so, therefore", "highlight": { "german": [], "english": [] } },
+      { "german": "bekommen", "english": "to receive", "highlight": { "german": [], "english": [] } },
+      { "german": "winken", "english": "to wave", "highlight": { "german": [], "english": [] } },
+      { "german": "Rat", "english": "advice", "highlight": { "german": [], "english": [] } },
+      { "german": "Chef", "english": "boss", "highlight": { "german": [], "english": [] } }
+    ]
   }
 ]
