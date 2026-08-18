@@ -142,6 +142,20 @@
     ]
   },
   {
+    "id": "rule-sk-to-sch-sh",
+    "title": "Proto-Germanic 'sk' → German 'sch', English 'sh'",
+    "description": "The deeper reason behind Schiff/ship: native Germanic words that started with 'sk' split in two directions. German kept the cluster but respelled it 'sch'. English smoothed it into 'sh'. (Careful: English words that still start with 'sk-' today, like 'skirt' or 'sky', are usually later Old Norse borrowings, not this native pattern — 'shirt' is the native English cousin of 'skirt', both from the same root as German Schürze.)",
+    "type": "sound-shift",
+    "examples": [
+      { "german": "Schiff", "english": "ship", "highlight": { "german": [0, 1, 2], "english": [0, 1] } },
+      { "german": "Fisch", "english": "fish", "highlight": { "german": [2, 3, 4], "english": [1, 2] } },
+      { "german": "Schürze", "english": "shirt", "highlight": { "german": [0, 1, 2], "english": [0, 1] } },
+      { "german": "scharf", "english": "sharp", "highlight": { "german": [0, 1, 2], "english": [0, 1] } },
+      { "german": "Schale", "english": "shell", "highlight": { "german": [0, 1, 2], "english": [0, 1] } },
+      { "german": "Schatten", "english": "shadow", "highlight": { "german": [0, 1, 2], "english": [0, 1] } }
+    ]
+  },
+  {
     "id": "rule-ei-to-long-i",
     "title": "German 'ei' → English long 'i' sound",
     "description": "German 'ei' is pronounced like the English word 'eye' — and it very often marks a cognate with an English word spelled with a long 'i' (as in 'mine' or 'wine').",
