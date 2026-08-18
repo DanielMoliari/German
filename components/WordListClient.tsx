@@ -94,7 +94,7 @@ export function WordListClient({
       <div className="flex justify-center gap-1 mb-6">
         <button
           onClick={() => selectTab("study")}
-          className={`px-6 py-2 text-sm font-bold rounded-t-md border-b-2 ${
+          className={`px-6 py-2 text-sm font-bold rounded-t-md border-b-2 cursor-pointer ${
             tab === "study"
               ? "text-[var(--gold)] border-[var(--gold)]"
               : "text-[var(--text-dim)] border-transparent"
@@ -104,7 +104,7 @@ export function WordListClient({
         </button>
         <button
           onClick={() => selectTab("table")}
-          className={`px-6 py-2 text-sm font-bold rounded-t-md border-b-2 ${
+          className={`px-6 py-2 text-sm font-bold rounded-t-md border-b-2 cursor-pointer ${
             tab === "table"
               ? "text-[var(--gold)] border-[var(--gold)]"
               : "text-[var(--text-dim)] border-transparent"
@@ -114,7 +114,7 @@ export function WordListClient({
         </button>
         <button
           onClick={() => selectTab("etymology")}
-          className={`px-6 py-2 text-sm font-bold rounded-t-md border-b-2 ${
+          className={`px-6 py-2 text-sm font-bold rounded-t-md border-b-2 cursor-pointer ${
             tab === "etymology"
               ? "text-[var(--gold)] border-[var(--gold)]"
               : "text-[var(--text-dim)] border-transparent"
@@ -134,7 +134,7 @@ export function WordListClient({
             setCurrent(0);
             setFlipped(false);
           }}
-          className="bg-[var(--surface-2)] border border-[var(--border)] text-[var(--text)] text-sm rounded-lg px-3 py-1.5"
+          className="bg-[var(--surface-2)] border border-[var(--border)] text-[var(--text)] text-sm rounded-lg px-3 py-1.5 cursor-pointer"
         >
           <option value="">All types</option>
           {PART_OF_SPEECH_OPTIONS.map((p) => (
@@ -150,7 +150,7 @@ export function WordListClient({
             setCurrent(0);
             setFlipped(false);
           }}
-          className="bg-[var(--surface-2)] border border-[var(--border)] text-[var(--text)] text-sm rounded-lg px-3 py-1.5"
+          className="bg-[var(--surface-2)] border border-[var(--border)] text-[var(--text)] text-sm rounded-lg px-3 py-1.5 cursor-pointer"
         >
           <option value="">All categories</option>
           {categories.map((c) => (
@@ -166,7 +166,7 @@ export function WordListClient({
             setCurrent(0);
             setFlipped(false);
           }}
-          className="bg-[var(--surface-2)] border border-[var(--border)] text-[var(--text)] text-sm rounded-lg px-3 py-1.5"
+          className="bg-[var(--surface-2)] border border-[var(--border)] text-[var(--text)] text-sm rounded-lg px-3 py-1.5 cursor-pointer"
         >
           <option value="">All difficulty</option>
           {DIFFICULTY_OPTIONS.map((d) => (
@@ -196,7 +196,7 @@ export function WordListClient({
         </label>
         <button
           onClick={clearFilters}
-          className="bg-transparent border border-[var(--border)] text-[var(--text-faint)] text-xs px-3 py-1.5 rounded-lg hover:text-[var(--text)] hover:border-[var(--text-faint)]"
+          className="bg-transparent border border-[var(--border)] text-[var(--text-faint)] text-xs px-3 py-1.5 rounded-lg hover:text-[var(--text)] hover:border-[var(--text-faint)] cursor-pointer"
         >
           Clear
         </button>
@@ -222,7 +222,7 @@ export function WordListClient({
               <button
                 onClick={goPrev}
                 disabled={current === 0}
-                className="bg-[var(--surface)] border border-[var(--border)] text-[var(--text)] px-4.5 py-2 rounded-lg text-sm font-semibold disabled:opacity-40"
+                className="bg-[var(--surface)] border border-[var(--border)] text-[var(--text)] px-4.5 py-2 rounded-lg text-sm font-semibold disabled:opacity-40 cursor-pointer disabled:cursor-default"
               >
                 ← Prev
               </button>
@@ -232,7 +232,7 @@ export function WordListClient({
               <button
                 onClick={goNext}
                 disabled={filtered.length === 0 || current === filtered.length - 1}
-                className="bg-[var(--surface)] border border-[var(--border)] text-[var(--text)] px-4.5 py-2 rounded-lg text-sm font-semibold disabled:opacity-40"
+                className="bg-[var(--surface)] border border-[var(--border)] text-[var(--text)] px-4.5 py-2 rounded-lg text-sm font-semibold disabled:opacity-40 cursor-pointer disabled:cursor-default"
               >
                 Next →
               </button>
