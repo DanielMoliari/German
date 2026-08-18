@@ -76,6 +76,38 @@ Field notes:
   words with a clear shared root/pattern. Omitted when no clean
   correspondence exists.
 
+#### Grammar Correctness Rules
+
+Every entry in `words.json` must follow real German grammar — this is a
+learning tool, so incorrect grammar in the data actively teaches the
+wrong thing. Claude checks these whenever adding or reviewing words:
+
+- **Capitalization is not a style choice.** German nouns are always
+  capitalized (`Zeit`, `Herz`, `Apfel`, `Katze`); every other part of
+  speech (verbs, adjectives, pronouns, adverbs, prepositions,
+  conjunctions) stays lowercase (`sprechen`, `hart`, `ich`, `aus`,
+  `mit`, `oder`). Do not force uniform casing across entries — mixed
+  casing that follows this rule is correct, not inconsistent.
+- **Headwords are singular**, not plural. Store the singular noun with
+  its `gender` and `plural` field set separately (e.g. `"der Keks"` /
+  `plural: "Kekse"`, not `"die Kekse"` as the headword) — matches how
+  every other noun entry is recorded.
+- **Gender must be verified**, not guessed from pattern-matching or
+  assumed from the English translation. When uncertain, look it up
+  rather than defaulting to a common gender.
+- **Plural forms must be the real irregular plural** (e.g. `Apfel` →
+  `Äpfel`, not `Apfels`), not a regularized guess. Uncountable nouns
+  (`Wasser`, `Milch`, `Zucker`, `Eis`, `Silber`) correctly have
+  `plural: null`.
+- **Highlight indices must stay in bounds** of the bare word (German
+  with article stripped) and the English word — verify index count
+  against actual string length before committing.
+
+When the user asks Claude to "review the list" or similar, Claude
+re-audits existing entries against these rules (not just spot-checks
+new ones) and fixes anything found, rather than assuming past entries
+are already correct.
+
 #### Date-Based Review Recompute
 
 The user can, at any time, ask Claude to flag words for review by age —
@@ -182,7 +214,9 @@ automatically (e.g. no auto-bolding of first letters).
 2. Claude looks up translation, part of speech, gender/plural (if noun),
    picks a category, drafts an example sentence, sets `dateLearned` to
    today, sets `needsReview: true` by default for a newly added word, and
-   determines a `highlight` mapping if a clear cognate pattern exists.
+   determines a `highlight` mapping if a clear cognate pattern exists —
+   all following the **Grammar Correctness Rules** above (verified
+   gender/plural, correct capitalization, singular headword).
 3. Claude appends the entry to `data/words.json`.
 4. Whenever the user asks (per the Date-Based Review Recompute above),
    Claude re-sweeps entries and updates `needsReview` using whatever day
